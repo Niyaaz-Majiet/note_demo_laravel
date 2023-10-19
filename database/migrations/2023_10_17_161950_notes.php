@@ -10,11 +10,12 @@ return new class extends Migration
     {
         Schema::create('notes', function (Blueprint $table) {
             $table->id();
-            $table->userId;
-            $table->title;
-            $table->description;
-            $table->status;
-            $table->priority;
+            $table->bigInteger('userId');
+            $table->string('title');
+            $table->string('description');
+            $table->string('status');
+            $table->string('priority');
+            $table->timestamps();
         });
     }
 
